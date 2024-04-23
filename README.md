@@ -16,3 +16,8 @@ INSTALLING YOSYS OPENSOURCE
 
 INSTALLING IVERILOG
 
+git clone from git hub repo of [Iverilog](https://github.com/steveicarus/iverilog)
+
+INSTALLING GTK WAVE
+
+sudo update sudo apt install gtkwave
