@@ -1,6 +1,6 @@
 # VSD_Squadron_Mini_Internship
 
-INSTALLING YOSYS OPENSOURCE 
+INSTALLING YOSYS OPENSOURCE \n
 
 
 . $ git clone https://github.com/YosysHQ/yosys.git
