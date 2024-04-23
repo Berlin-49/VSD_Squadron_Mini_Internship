@@ -4,10 +4,10 @@
 
 * Cloning using Git Repo https://github.com/riscv-collab/riscv-gnu-toolchain
 ![RISCV GNU toolchain](https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/cb4fe601-e4b1-4229-96f9-760ea70bcb7f)
-* installing Linux and New Lib
+* installing Linux and New Lib<br>
 ![Linuxcrosscompiler](https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/9b9bbb01-f2cd-4050-952f-ac88cf89710e)
-![Newlibcrosscompiler](https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/2f4dea8f-8b57-40c3-9e01-44fa3caacca3)
-*RISCV GCC testing 
+![Newlibcrosscompiler](https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/2f4dea8f-8b57-40c3-9e01-44fa3caacca3)<br>
+*RISCV GCC testing<br> 
 ![RISCV_GCC_TESTING](https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/c94ac7e4-bf68-497d-bbd1-f831b53307a3)
   
 ### INSTALLING YOSYS OPENSOURCE 
@@ -31,5 +31,5 @@ git clone from git hub repo of [Iverilog](https://github.com/steveicarus/iverilo
 
 ### INSTALLING GTK WAVE
 
-*sudo update sudo apt install gtkwave
+*sudo update sudo apt install gtkwave<br>
 ![gtkwave](https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/ec675688-9293-4ea2-b78e-511aa128fd69)
