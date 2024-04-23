@@ -18,7 +18,7 @@
 
 git clone from git hub repo of [Iverilog](https://github.com/steveicarus/iverilog)
 
-![Screenshot from 2024-04-23 19-23-58](https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/47c2e9a8-f8fe-4529-8f29-ed08f43d6a5f)
+![IVERILOG](https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/47c2e9a8-f8fe-4529-8f29-ed08f43d6a5f)
 ### INSTALLING GTK WAVE
 
 sudo update sudo apt install gtkwave
