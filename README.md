@@ -1,6 +1,6 @@
 # VSD_Squadron_Mini_Internship
-
-## INSTALLING YOSYS OPENSOURCE 
+## DAY 0
+### INSTALLING YOSYS OPENSOURCE 
 
 
 * $ git clone https://github.com/YosysHQ/yosys.git<br>
@@ -14,10 +14,10 @@
 * $ sudo make install<br>
 ![YOSYS](https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/2ccdef93-5e0f-4602-9ef0-c60eef17f1d8)
 
-## INSTALLING IVERILOG
+### INSTALLING IVERILOG
 
 git clone from git hub repo of [Iverilog](https://github.com/steveicarus/iverilog)
 
-## INSTALLING GTK WAVE
+### INSTALLING GTK WAVE
 
 sudo update sudo apt install gtkwave
