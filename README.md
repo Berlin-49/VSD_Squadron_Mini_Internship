@@ -3,13 +3,13 @@
 ### RISCv GNU TOOL
 
 * Cloning using Git Repo https://github.com/riscv-collab/riscv-gnu-toolchain
-<img src="https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/cb4fe601-e4b1-4229-96f9-760ea70bcb7f" width="600" height="500"><br>
+<img src="https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/cb4fe601-e4b1-4229-96f9-760ea70bcb7f" width="700" height="500"><br>
 * installing Linux and New Lib<br>
-<img src="https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/9b9bbb01-f2cd-4050-952f-ac88cf89710e" width="600" height="500"><br>
-<img src="https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/2f4dea8f-8b57-40c3-9e01-44fa3caacca3" width="600" height="500"><br>
+<img src="https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/9b9bbb01-f2cd-4050-952f-ac88cf89710e" width="700" height="500"><br>
+<img src="https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/2f4dea8f-8b57-40c3-9e01-44fa3caacca3" width="700" height="500"><br>
 
 *RISCV GCC testing<br> 
-<img src="https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/c94ac7e4-bf68-497d-bbd1-f831b53307a3" width="600" height="500"><br>
+<img src="https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/c94ac7e4-bf68-497d-bbd1-f831b53307a3" width="700" height="500"><br>
 
   
 ### INSTALLING YOSYS OPENSOURCE 
@@ -23,19 +23,19 @@
 * $ make config-gcc<br>
 * $ make<br> 
 * $ sudo make install<br>
-<img src="https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/2ccdef93-5e0f-4602-9ef0-c60eef17f1d8" width="600" height="500"><br>
+<img src="https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/2ccdef93-5e0f-4602-9ef0-c60eef17f1d8" width="700" height="500"><br>
 
 ### INSTALLING IVERILOG
 
 git clone from git hub repo of [Iverilog](https://github.com/steveicarus/iverilog)
 
-<img src="https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/47c2e9a8-f8fe-4529-8f29-ed08f43d6a5f" width="600" height="500"><br>
+<img src="https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/47c2e9a8-f8fe-4529-8f29-ed08f43d6a5f" width="700" height="500"><br>
 
 ### INSTALLING GTK WAVE
 
 *sudo update sudo apt install gtkwave<br>
-<img src="https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/ec675688-9293-4ea2-b78e-511aa128fd69" width="600" height="500"><br>
-<img src="https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/26d5dfbb-113f-4ff2-8497-465a1f467d3d" width="600" height="500"><br>
+<img src="https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/ec675688-9293-4ea2-b78e-511aa128fd69" width="700" height="500"><br>
+<img src="https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/26d5dfbb-113f-4ff2-8497-465a1f467d3d" width="700" height="500"><br>
 
 ## Week 2
 ### RISC-V Instruction Set
@@ -152,6 +152,28 @@ Opcode for SLL = 0111011,  r15 = 01111, r1 = 00001 ,  r2 = 00010,func3 = 001 (co
 This instruction performs a logical right shift on the value in register r14 by the amount specified in register r2 (shift amount 2) and stores the result in register r16.
 Opcode for SRL = 0111011, r16 = 10000, r14 = 01110,  r2 = 00010, func3 = 101 (corresponding to shift right logical), func7 = 0000000<br>
 32-bit instruction: 0000000_00010_01110_101_10000_0111011
+
+## WEEK 03
+### Compilation of C Program using RISCV Compiler
+#### Writing C Program
+Use Leafpad Editor to write C-program<br>
+<img src="https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/06d7918c-9526-4f27-8f55-e918ff78d1d1" width="700" height="500"><br>
+#### Compilation and Execution
+Compile and run the program using gcc program_name.c<br>
+./a.out<br>
+Compile the above program using RISCV GCC compiler by following above instruction<br>
+$ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o program_name.o program_name.c<br>
+<img src="https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/8b71437b-1ebc-43e7-9734-4df57d57d915" width="700" height="500"><br>
+Now in new terminal we have to open assembly code to verify out result
+$ riscv64-unknown-elf-objdump -d program_name.o 
+<img src="https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/6f9a9693-16c1-4b15-97a4-0b33dab0def5" width ="700" height="500"><br>
+As we are looking for assembly code related to procedural block "main"<br>
+$ riscv64-unknown-elf-objdump -d program_name.o | less<br>
+: /main<br>
+<img src="https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/59cf94dd-40db-4198-a35a-8b42a1f6ff41" width="700" height="500"><br>
+
+
+
 
 
 
