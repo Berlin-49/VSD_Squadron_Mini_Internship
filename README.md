@@ -585,6 +585,49 @@ Grey code, also known as reflected binary code, is a binary numeral system where
 
 In Grey code, each binary numeral is arranged such that adjacent values differ by only one bit. This property is useful in applications such as rotary encoders where it ensures that only one bit changes at a time as <br>the encoder moves through its positions, thus reducing the likelihood of misreadings due to noise or other errors.<br>
 
+#### Code Implemented
+
+```
+#include <ch32v00x.h>
+
+// Define GPIO pins for the LEDs
+#define LEDS (GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_3)
+
+// Gray code sequence for numbers 0 to 9
+const uint8_t grayCode[10] = {0x0, 0x1, 0x3, 0x2, 0x6, 0x7, 0x5, 0x4, 0xC, 0x9};
+
+// Function to initialize GPIO pins
+void GPIO_Config(void) {
+    GPIO_InitTypeDef GPIO_InitStructure;
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
+
+    // Configure LEDs on port C as output
+    GPIO_InitStructure.GPIO_Pin = LEDS;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(GPIOC, &GPIO_InitStructure);
+}
+
+// Simple delay function
+void delay(uint32_t count) {
+    while(count--) {
+        __NOP(); // Do nothing (NOP instruction)
+    }
+}
+
+int main(void) {
+    GPIO_Config(); // Configure the GPIO
+
+    while(1) {
+        for(int i = 0; i < 10; i++) {
+            // Display Gray code on LEDs
+            GPIO_Write(GPIOC, (GPIO_ReadOutputData(GPIOC) & ~LEDS) | grayCode[i]);
+            delay(2000000); // 2-second delay (adjust count as needed for your clock speed)
+        }
+    }
+}
+```
+
 #### Components Required 
 * VSD Mini Squadron
 * 4 Resistor 220 ohm
@@ -593,6 +636,9 @@ In Grey code, each binary numeral is arranged such that adjacent values differ b
 
 #### Circuit Diagram
 ![Greycode](https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/d11deee7-bc7c-49a3-9806-3c69e6e5876a)
+
+#### Demo video
+https://drive.google.com/drive/folders/1KVjx5o0_UxJC28ukT-WPIo2IOa9Bjpne
 
 
 
