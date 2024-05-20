@@ -637,6 +637,9 @@ int main(void) {
 #### Circuit Diagram
 ![Greycode](https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/d11deee7-bc7c-49a3-9806-3c69e6e5876a)
 
+![Untitled](https://github.com/Berlin-49/VSD_Squadron_Mini_Internship/assets/97489606/76b6258b-396c-4b20-a350-4a3202ef0468)
+
+
 #### Demo video
 https://drive.google.com/drive/folders/1KVjx5o0_UxJC28ukT-WPIo2IOa9Bjpne
 
